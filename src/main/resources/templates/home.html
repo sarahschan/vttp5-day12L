@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+        
+        <!-- <div data-th-if="${currHour lt 12}"> -->
+        <div th:if="${currHour lt 12}">
+            Good Morning
+        </div>
+        <div th:if="${currHour ge 12 and currHour lt 17}">
+            Good Afternoon
+        </div>
+        <div th:if="${currHour ge 17}">
+            Good Evening
+        </div>
+
+        <p>The current time is <span data-th-text="${currTime}"></span> </p>
+        <br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nemo vero, magni sunt, accusamus excepturi cupiditate cumque reiciendis sit soluta a iure vitae tempore nisi assumenda neque? Veniam, hic est!</p>
+
+        <div>
+            <img width="25%" height="25%" src="https://picsum.photos/200"/>
+        </div>
+</body>
+</html>
